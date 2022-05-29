@@ -1,0 +1,841 @@
+	PHP Project
+
+		Project LifeCycle
+		
+			Back-end		Core Database
+			
+				1- Requirement Collection (Gathering)
+				2- Conceptual Design (Requirement Analysis)
+				3- Logical Design (ER Model)
+				4- Physical Design (Create)
+				
+			
+			Front-end		UI -> User Interface
+				
+				1- Functionality Analysis
+				2- Application Design (Programming)
+				3- Transaction Implementation (Testing)  Sample  
+				
+					Test Driven Development
+					
+					
+						
+						Application
+						
+							Web Based		Browser 
+							
+								No need to install		OS 		Computer Tablet Mobile 	
+								Portable
+								Anytime Anywhere				
+							
+								PHP 					
+									HTML
+									CSS
+									JavaScript
+									jQuery
+									Bootstrap
+									AJAX
+							
+							Desktop Based	Software
+									Java
+									C#
+									VB.NET					
+	
+	
+															
+	
+	Project Title (Private School MIS)
+	
+		Functional
+	
+		1- Requirement Collection
+		
+			Admin
+				user management
+					user level 
+				student achivement		public     website
+				advertisement
+				news
+				about school
+				contact 
+		
+			Employee 
+				Add New Employee
+				information
+				attendance
+				salary
+				resign
+				retire
+				
+			Library
+				registration
+				library book 
+				book loan 	date
+				book return date
+				surcharge
+			
+			Student
+				Add New Student
+				registration
+				information
+				card
+				class
+				
+				subject
+			
+				graudation		date
+			
+				attendance
+								
+				exam
+					talent exam
+					mid year exam
+					final exam
+					new student exam
+					second chance exam
+					
+				score and result    result sheet
+				
+				report each 3 years	
+			
+				student user account 
+			
+			Student transfer
+			
+			Student fee
+			
+			Teacher
+				registration
+				information
+				
+			Teacher subject
+				attendance		type 
+				teacher salary
+				
+			Expense	
+				
+			Inventory	
+				in
+				out
+				
+			Laboratoar	
+				add  save
+				report 
+				
+			Transport	
+				per month   amount
+				
+				
+				
+				
+				
+	Module
+		Admin
+		Employee
+		Teacher
+		Student
+		Finance
+		Inventory
+		Library
+		Laboratoar
+
+
+		
+		
+	2- Conceptual Design	
+		
+		users
+			user_id				
+			employee
+			username
+			password
+			admin_level
+			employee_level
+			teacher_level
+			student_level
+			finance_level
+			inventory_level
+			library_level
+			laboratoar_level
+			
+		achievement			
+			person_name
+			ach_title
+			ach_text
+			ach_date
+			ach_type
+			ach_file
+		
+		advertisement
+			ads_title
+			ads_desc
+			ads_from
+			ads_to
+			ads_file
+		
+		news
+			news_title
+			news_text
+			news_date
+			news_file
+			
+		employee
+			firstname
+			lastname
+			fathername
+			gender
+			photo
+			phone
+			email
+			address
+			education
+			position
+			employee_type
+			gross_salary
+			working_hours
+			hire_date			
+			retire_date
+		
+		emp_attendance		
+			employee
+			absent_date
+			absent_hour
+			
+		emp_overtime	
+			employee
+			overtime_date
+			overtime_hour
+		
+		emp_salary
+			employee_name		
+			fathername			
+			education
+			position
+			gross_salary
+			absent_amount
+			overtime_amount
+			tax_amount
+			net_salary
+			
+		emp_resign
+			employee
+			photo
+			resign_date
+			resign_reason
+		
+		lib_member
+			student name
+			fathername
+			class
+			reg_date
+		
+		lib_book
+			isbn
+			book_name
+			author
+			edition
+			book_type
+			
+		lib_loan
+			student
+			book
+			loan_date
+			return_date
+			surcharge
+		
+		student
+			letter_no
+			reg_no
+			name
+			fathername
+			father_job
+			native_lang
+			grandfathername
+			gender
+			phone
+			relative_phone
+			photo
+			address
+			age
+			nic
+			nic_file
+			class
+			fees
+			username		
+			password		
+			remark
+		
+		student_relative
+			relative_name
+			relative_relation
+			relative_job
+			relation_phone
+		
+		student_attendance		
+			reg_no
+			student
+			absent_type
+			absent_date
+			absent_part
+			remark
+			
+		exam
+			exam_title
+			exam_type
+			exam_date
+			teacher_name
+			subject_name
+					
+		score
+			student_name
+			subject_name
+			teacher_name
+			exam_type
+			supervisor_name
+			exam_date
+			class
+			section
+			written_mark
+			oral_mark
+			class_activity
+			homework
+			final_mark
+			remark
+			
+		student_transfer
+			reg_no
+			transfer_date
+			student_name
+			from_school
+			to_school
+			letter_no
+			class
+			grade
+			remark
+		
+		student_fee
+			student_name
+			fathername
+			fee_month
+			class
+			fee_amount
+			discount
+			paid_amount
+			paid_date
+			
+		income
+			income_date	
+			income_type			(admission, exam_fine, transport, book_sales, uniform_sales)
+			income_amount
+			student_name
+			
+		subject
+			subject_name
+			subject_class
+			number_of_subject
+			teacher_name
+		
+		expense
+			expense_type
+			expense_date
+			amount
+			remark
+		
+		stock
+			item_name
+			quantity
+			
+		stock_in_out
+			item_name
+			from
+			to
+			in_date
+			price
+			quantity
+			stock_type
+			remark
+			
+		lab	
+			item_name
+			description
+			quantity
+			remark
+
+		lab_out
+			class
+			experiment_date
+			teacher_name
+			experiment_title
+			experiment_goal
+			lab_item
+			used_quantity
+			damaged_quantity
+			experiment_result			
+		
+		student_transport
+			student_name
+			class
+			student_address
+			transport_fee
+			transport_time
+			car_information
+			
+		
+	3- Logical Design
+		
+			ER Modeling
+			
+			Key	PK FK
+						Relationship
+							degree
+							type
+							RIC
+							
+			Normalization				
+							
+			Fields Constraint				
+		
+				Primary Key 	numeric
+				
+					Uniquley Identifier
+					
+					UNIQUE + NOT NULL 			 	PK 
+
+					1- Composite Primary Key		2, 3   combine 		pair unique 					
+					2- Surrogate Primary Key		AUTO_INCREMENT
+					
+				Foregin Key	 ----> 
+					
+						Relationship Cardinality
+						
+							1:1					FK --> UNIQUE 
+							1:N					FK --> NOT UNIQUE 
+							
+						Relationship type
+							
+							1- Optional			FK ---> NULL
+							2- Mandatory		FK ---> NOT NULL
+							
+							
+						Referential Integrity Constraint (RIC)
+						
+						
+										ON UPDATE 
+										ON DELETE 
+										 
+					
+					Key 
+						avoid duplication of strong entity entity 
+					
+					Constraint
+						Avoid Unreal Data
+				
+			
+
+
+
+		Normliazation
+			
+			Redundancy
+		
+				Step by Step Process 
+				
+				1NF
+					a: no repeated GROUP of data   (Choose a good primary key)
+					b: Attribute should be atomic
+					
+						composite attribute	----> split to new attributes
+						multi value attribute --> split to new table
+						
+				2NF
+					a: 1NF rules should be obeyed
+					b: No Partial Dependency  (FFD)
+					
+					Each none key attribute should depend on complete (whole) primary key 
+					Composite Primary Key 
+				
+				
+				3NF
+					a: 2NF Rules should be obeyed
+					b: No Transitive Dependency 
+					
+					Any None key attribute should NOT depend on other none key attribute
+
+						inference value	
+							total 
+						
+						derived attribute 
+							age 
+							
+									
+							
+							
+				Constraint
+				
+					PK
+					FK
+					AUTO_INCREMENT
+					
+					Unique	
+					NOT NULL
+					DEFAULT 
+					
+					None Key Attribute
+					
+					
+							
+							
+	4- Physical Design
+		
+		Create 		ER Model		attribute -> data type
+							
+							
+			number				Capcity
+				integer
+					tinyint		1B		8b   2^8 = 256 / 2    -128 to +127		~ 120
+					smallint	2B		~ 32000
+					mediumint	3B		~ 16000000
+					int			4B		~ 20000000000
+					bigint		8B		very very large 
+				
+				floating
+					float		4B		7
+					double		8B		14		
+					
+					decimal		8B		14
+
+					
+			text
+			
+					each latin character -> 1B
+					each unicode character -> 2B
+			
+				char(length)	---> fixed length
+				
+				varchar(length) ---> variant length
+					length 1 ... 255
+					
+				text
+			
+			
+			date
+				DATE		YYYY-mm-dd
+				TIME		hh:ii:ss
+				DATETIME	YYYY-mm-dd hh:ii:ss
+				TIMESTAMP
+					show   convert datetime
+					
+					12343423445		BIGINT
+			
+			file
+				address url path
+					
+			
+			boolean			
+				2 cases		
+							
+				
+				
+		advertisement
+			ads_id				INT PRIMARY KEY AUTO_INCREMENT
+			ads_title			VARCHAR(128) NOT NULL
+			ads_desc			TEXT NOT NULL
+			ads_from			DATE NOT NULL
+			ads_to				DATE NOT NULL
+			ads_file			VARCHAR(128) NOT NULL	
+			
+		news
+			news_id				PRIMARY KEY AUTO_INCREMENT
+			news_title			NOT NULL
+			news_text			NOT NULL
+			news_date			NOT NULL
+			news_file			
+			
+		CREATE TABLE employee (
+			employee_id			INT PRIMARY KEY AUTO_INCREMENT,
+			firstname			VARCHAR(32) NOT NULL,
+			lastname			VARCHAR(32) NOT NULL,
+			fathername			VARCHAR(32) NOT NULL,
+			gender				BOOLEAN NOT NULL,
+			photo				VARCHAR(128) NOT NULL,
+			phone				CHAR(10) NOT NULL UNIQUE,
+			email				VARCHAR(128) UNIQUE,
+			address				VARCHAR(255) NOT NULL,
+			education			VARCHAR(32) NOT NULL,
+			position			VARCHAR(64) NOT NULL,	
+			employee_type		BOOLEAN NOT NULL,
+			gross_salary		INT NOT NULL	,
+			currency			CHAR(3) NOT NULL,
+			working_hours		VARCHAR(32) NOT NULL,
+			hire_date			DATE NOT NULL		,
+			retire_date			DATE
+		);
+		
+		employee_achievement			
+			achievement_id		PRIMARY KEY AUTO_INCREMENT
+			employee_id			NOT NULL FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE NO ACTION ON UPDATE CASCADE 
+			ach_title			NOT NULL
+			ach_text			NOT NULL
+			ach_date			NOT NULL
+			ach_type
+			ach_file			
+		
+		users
+			user_id				PRIMARY KEY AUTO_INCREMENT
+			employee_id			NOT NULL UNIQUE FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE CASCADE ON UPDATE CASCADE 
+			username			VARCHAR(32) NOT NULL UNIQUE 
+			password			VARCHAR(64) NOT NULL 
+			admin_level			TINYINT NOT NULL DEFAULT 0
+			employee_level		TINYINT NOT NULL DEFAULT 0
+			teacher_level		TINYINT NOT NULL DEFAULT 0
+			student_level		TINYINT NOT NULL DEFAULT 0
+			finance_level		TINYINT NOT NULL DEFAULT 0
+			inventory_level		TINYINT NOT NULL DEFAULT 0
+			library_level		TINYINT NOT NULL DEFAULT 0
+			laboratoar_level	TINYINT NOT NULL DEFAULT 0
+		
+		emp_attendance		
+			employee_id		PRIMARY KEY FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE CASCADE ON UPDATE CASCADE 
+			absent_year		PRIMARY KEY 
+			absent_month	PRIMARY KEY
+			absent_day		PRIMARY KEY
+			absent_hour		NOT NULL
+			absent_type 	NOT NULL
+			
+		emp_overtime	
+			employee_id			PRIMARY KEY FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE CASCADE ON UPDATE CASCADE 
+			overtime_year		PRIMARY KEY 
+			overtime_month		PRIMARY KEY 
+			overtime_day		PRIMARY KEY 
+			overtime_hour		NOT NULL
+		
+		emp_salary
+			employee_id			PRIMARY KEY FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE NO ACTION ON UPDATE CASCADE
+			salary_year			PRIMARY KEY
+			salary_month		PRIMARY KEY			
+			absent_amount		NOT NULL DEFAULT 0
+			overtime_amount     NOT NULL DEFAULT 0 
+			tax_amount			NOT NULL DEFAULT 0
+			net_salary			NOT NULL	
+			exchange_rate		NOT NULL	
+			changed_amount		NOT NULL 
+			payment_date		
+			
+		emp_resign
+			resign_id			PRIMARY KEY AUTO_INCREMENT
+			employee_id			NOT NULL FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE CASCADE ON UPDATE CASCADE
+			resign_date			NOT NULL
+			resign_reason		NOT NULL
+		
+		lib_member	
+			member_id 			PRIMARY KEY AUTO_INCREMENT
+			student_id			NOT NULL UNIQUE FOREIGN KEY (student_id) REFERENCES student (student_id) ON DELETE CASCADE ON UPDATE CASCADE 
+			reg_date			NOT NULL
+		
+		lib_book
+			book_id				PRIMARY KEY AUTO_INCREMENT
+			isbn				
+			book_name			NOT NULL
+			author				NOT NULL
+			edition				
+			category			NOT NULL
+			
+		lib_loan
+			loan_id			PRIMARY KEY AUTO_INCREMENT
+			student_id		NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id) ON DELETE CASCADE ON UPDATE CASCADE
+			book_id			NOT NULL FOREIGN KEY (book_id) REFERENCES lib_book (book_id) ON DELETE CASCADE ON UPDATE CASCADE
+			loan_date		NOT NULL
+			return_date		
+			surcharge		
+		
+		classes
+			class_id			PRIMARY KEY AUTO_INCREMENT
+			class_name			NOT NULL
+			section_name		
+			fees				NOT NULL
+			
+		subject
+			subject_id			PRIMARY KEY AUTO_INCREMENT
+			subject_name		NOT NULL
+			class_id			FOREIGN KEY (class_id) REFERENCES classes (class_id) ON DELETE CASCADE ON UPDATE CASCADE
+			
+		subject_teach	
+			subject_id			PRIMARY KEY FOREIGN KEY (subject_id) REFERENCES subject (subject_id)
+			teacher_id			PRIMARY KEY FOREIGN KEY (teacher_id) REFERENCES teacher (teacher_id)
+			teach_year			PRIMARY KEY 
+		
+		student
+			student_id			PRIMARY KEY AUTO_INCREMENT
+			letter_no			NOT NULL
+			reg_no				NOT NULL UNIQUE
+			student_name		NOT NULL
+			fathername			NOT NULL
+			father_job			NOT NULL
+			native_lang			NOT NULL
+			grandfathername		NOT NULL
+			gender				NOT NULL
+			phone				  
+			photo				NOT NULL
+			province			NOT NULL 			
+			district			NOT NULL
+			village				NOT NULL
+			current_address		NOT NULL
+			birth_year			NOT NULL
+			nic					NOT NULL UNIQUE
+			nic_file			NOT NULL
+			class_id			NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id) ON DELETE NO ACTION ON UPDATE CASCADE 
+			fees				NOT NULL
+			fees_remark			
+			username			NOT NULL UNIQUE
+			password			NOT NULL
+			remark				
+		
+		student_achievement			
+			achievement_id		PRIMARY KEY AUTO_INCREMENT
+			student_id			NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			ach_title			NOT NULL		
+			ach_text			NOT NULL
+			ach_date			NOT NULL
+			ach_type			NOT NULL	
+			ach_file			NOT NULL
+							
+		student_relative
+			relative_id				PRIMARY KEY AUTO_INCREMENT
+			student_id				NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			relative_name			NOT NULL
+			relative_relation		NOT NULL
+			relative_job			NOT NULL		
+			relative_phone			
+		
+		student_attendance		
+			attendance_id			PRIMARY KEY AUTO_INCREMENT
+			student_id				NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			absent_type				NOT NULL	
+			absent_date				NOT NULL
+			absent_part				NOT NULL
+			remark					
+			
+		exam
+			exam_id					PRIMARY KEY AUTO_INCREMENT
+			exam_title				NOT NULL
+			exam_type				NOT NULL
+			exam_date				NOT NULL
+			subject_id				NOT NULL FOREIGN KEY (subject_id) REFERENCES subject (subject_id)
+			teacher_id				NOT NULL FOREIGN KEY (teacher_id) REFERENCES employee (employee_id)
+			supervisor_id			FOREIGN KEY (supervisor_id) REFERENCES employee (employee_id) ON DELETE SET NULL ON UPDATE CASCADE 
+					
+		score
+			exam_id					PRIMARY KEY FOREIGN KEY (exam_id) REFERENCES exam (exam_id)
+			student_id				PRIMARY KEY	FOREIGN KEY (student_id) REFERENCES student (student_id) 
+			written_mark			NOT NULL DEFAULT 0
+			oral_mark				NOT NULL DEFAULT 0
+			class_activity			NOT NULL DEFAULT 0
+			homework				NOT NULL DEFAULT 0
+			final_mark				NOT NULL
+			remark
+			
+		student_transfer
+			transfer_id			PRIMARY KEY AUTO_INCREMENT
+			student_id			NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			transfer_date		NOT NULL 
+			from_school			NOT NULL 
+			to_school			NOT NULL 
+			letter_no			NOT NULL
+			class_id			NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id)
+			grade				
+			remark				
+		
+		student_fee
+			fee_id				PRIMARY KEY AUTO_INCREMENT
+			student_id			NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			fee_month			NOT NULL
+			class_id			NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id)
+			fee_amount			NOT NULL
+			discount			NOT NULL DEFAULT 0
+			paid_amount			NOT NULL
+			paid_year			NOT NULL
+			paid_month			NOT NULL
+			paid_day			NOT NULL
+
+		income_type
+			type_id				PRIMARY KEY AUTO_INCREMENT
+			type_name			NOT NULL UNIQUE -- (admission, exam_fine, transport, book_sales, uniform_sales) 
+			
+		income
+			income_id			PRIMARY KEY AUTO_INCREMENT
+			income_year			NOT NULL
+			income_month		NOT NULL
+			income_day			NOT NULL
+			type_id				FOREIGN KEY (type_id) REFERENCES income_type (type_id) ON DELETE NO ACTION ON UPDATE CASCADE
+			income_amount		NOT NULL	
+			student_id			NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			class_id			NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id)
+			
+		expense_type
+			type_id				PRIMARY KEY AUTO_INCREMENT
+			type_name			NOT NULL UNIQUE
+			
+		expense
+			expense_id			PRIMARY KEY AUTO_INCREMENT
+			employee_id	  	 	FOREIGN KEY (employee_id) REFERENCES employee (employee_id)
+			type_id				FOREIGN KEY (type_id) REFERENCES expense_type (type_id) ON DELETE NO ACTION ON UPDATE CASCADE
+			expense_year		NOT NULL
+			expense_month		NOT NULL
+			expense_day			NOT NULL
+			amount				NOT NULL		
+			currency			NOT NULL
+			remark				
+		
+		stock
+			item_id				PRIMARY KEY AUTO_INCREMENT
+			item_name			NOT NULL UNIQUE
+			quantity			NOT NULL	
+			price				NOT NULL
+			
+		stock_in
+			in_id				PRIMARY KEY AUTO_INCREMENT
+			item_id				NOT NULL FOREIGN KEY (item_id) REFERENCES item (item_id)
+			source				NOT NULL
+			in_date				NOT NULL
+			quantity			NOT NULL
+			remark
+			
+		stock_out
+			out_id				PRIMARY KEY AUTO_INCREMENT
+			item_id				NOT NULL FOREIGN KEY (item_id) REFERENCES item (item_id)
+			student_id			NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			out_date			NOT NULL
+			quantity			NOT NULL
+			remark
+			
+		lab	
+			lab_id				PRIMARY KEY AUTO_INCREMENT
+			item_name			NOT NULL UNIQUE
+			description			NOT NULL	
+			quantity			NOT NULL
+			remark
+
+		lab_out
+			lab_out_id			PRIMARY KEY AUTO_INCREMENT
+			class_id			NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id)
+			experiment_date		NOT NULL
+			teacher_id			NOT NULL FOREIGN KEY (teacher_id) REFERENCES teacher (teacher_id)
+			experiment_title	NOT NULL	
+			experiment_goal		NOT NULL
+			lab_id				NOT NULL FOREIGN KEY (lab_id) REFERENCES lab (lab_id)
+			used_quantity		NOT NULL
+			damaged_quantity	NOT NULL	
+			experiment_result	NOT NULL		
+		
+		student_transport
+			transport_id			PRIMARY KEY AUTO_INCREMENT
+			student_id				NOT NULL FOREIGN KEY (student_id) REFERENCES student (student_id)
+			class_id				NOT NULL FOREIGN KEY (class_id) REFERENCES classes (class_id)
+			date_year				NOT NULL
+			status					NOT NULL
+			transport_fee			NOT NULL    	
+			transport_time			NOT NULL
+			car_information			NOT NULL
+		
+		
+		
